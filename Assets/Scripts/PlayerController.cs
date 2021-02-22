@@ -58,6 +58,12 @@ public class PlayerController : MonoBehaviour
       // Run the 'SetCountText()' function (see below)
       SetCountText();
     }
+    if (other.gameObject.CompareTag("SpeedPickup"))
+    {
+      other.gameObject.SetActive(false);
+      speed = speed + 25;
+      count = count + 1;
+    }
   }
 
   void OnMove(InputValue value)
